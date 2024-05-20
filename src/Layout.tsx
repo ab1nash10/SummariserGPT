@@ -1,25 +1,21 @@
-import { MoonIcon, Sun } from "lucide-react";
-import Button from "./components/Button";
+import Demo from "./components/Demo";
+import Hero from "./components/Hero";
+import ThemeBtn from "./components/ThemeBtn";
 import { useTheme } from "./contexts/themeContext";
 
 const Layout = () => {
-  const { themeMode, toggleThemeMode } = useTheme();
+  const { themeMode } = useTheme();
   return (
-    <div>
-      <Button
-        className="text-black absolute top-3 right-5"
-        onClick={toggleThemeMode}
-      >
-        <p className="py-3 px-3 bg-red-400 rounded-full">
-          {" "}
-          {themeMode === "dark" ? (
-            <Sun size={40} fill="black" />
-          ) : (
-            <MoonIcon size={40} fill="black" />
-          )}
-        </p>
-      </Button>
-    </div>
+    <main>
+      <div className={`${themeMode !== "dark" && "main"}`}>
+        <div className={`${themeMode === "dark" ? "dgradient" : "gradient"}`} />
+      </div>
+      <div className="app">
+        <Hero />
+        <Demo />
+        <ThemeBtn />
+      </div>
+    </main>
   );
 };
 
