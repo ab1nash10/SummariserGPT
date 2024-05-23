@@ -1,5 +1,5 @@
 import logo from "../assets/logo.svg";
-import Button from "./Button";
+import { Button } from "./ui/button";
 const Hero = () => {
   return (
     <header className={`w-full flex flex-col justify-center items-center`}>
@@ -9,7 +9,7 @@ const Hero = () => {
           onClick={() =>
             window.open("https://github.com/ab1nash10/summariserGPT")
           }
-          className={`black_btn`}
+          className={`rounded-lg text-lg`}
         >
           Github
         </Button>

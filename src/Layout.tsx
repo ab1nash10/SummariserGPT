@@ -8,7 +8,9 @@ const Layout = () => {
   return (
     <main>
       <div className={`${themeMode !== "dark" && "main"}`}>
-        <div className={`${themeMode === "dark" ? "dgradient" : "gradient"}`} />
+        <div
+          className={`${themeMode === "dark" ? "dgradient " : "gradient"}`}
+        />
       </div>
       <div className="app">
         <Hero />
